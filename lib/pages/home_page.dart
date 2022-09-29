@@ -1,6 +1,13 @@
-import 'package:carousel_slider/carousel_slider.dart';
+//import 'package:carousel_slider/carousel_slider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:test_new/levels/levels_list.dart';
+import 'package:test_new/levels/medeb_five.dart';
+import 'package:test_new/levels/medeb_four.dart';
+import 'package:test_new/levels/medeb_two.dart';
+//import 'package:test_new/auth/main_page.dart';
+import 'package:test_new/video_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,247 +25,172 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text("Home"),
-        backgroundColor: Colors.deepPurple[400],
+        backgroundColor: Colors.purple[500],
         elevation: 0,
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: GestureDetector(
+              onTap: () {
+                FirebaseAuth.instance.signOut();
+              },
+              child: const Icon(Icons.logout),
+            ),
+          ),
+        ],
       ),
       body: Center(
         child: ListView(
           children: [
-            CarouselSlider(
-              items: [
-                //1st Image of Slider
-                Container(
-                  margin: const EdgeInsets.all(8.0),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const LevelsList();
+                    },
+                  ),
+                );
+              },
+              child: Card(
+                margin:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
+                child: Container(
+                  height: 300,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(15.0),
                     image: const DecorationImage(
-                      image: NetworkImage(
-                          "https://images.unsplash.com/photo-1661961111184-11317b40adb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
+                      image: AssetImage('assets/motor.png'),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'ምድብ 1',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
-
-                //2nd Image of Slider
-                Container(
-                  margin: const EdgeInsets.all(8.0),
+              ),
+            ),
+            //second card
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const MedebTwo();
+                    },
+                  ),
+                );
+              },
+              child: Card(
+                margin:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
+                child: Container(
+                  height: 300,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(15.0),
                     image: const DecorationImage(
-                      image: NetworkImage(
-                          "https://images.unsplash.com/photo-1663364573300-9436981cbba6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fitWidth,
+                      image: AssetImage('assets/car.png'),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'ምድብ 2',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
-
-                //3rd Image of Slider
-                Container(
-                  margin: const EdgeInsets.all(8.0),
+              ),
+            ),
+            //third card
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const MedebFour();
+                    },
+                  ),
+                );
+              },
+              child: Card(
+                margin:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
+                child: Container(
+                  height: 300,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(15.0),
                     image: const DecorationImage(
-                      image: NetworkImage(
-                          "https://images.unsplash.com/photo-1663326223809-7a83745328a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fitWidth,
+                      image: AssetImage('assets/bus.png'),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'ምድብ 4',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
-
-                //4th Image of Slider
-                Container(
-                  margin: const EdgeInsets.all(8.0),
+              ),
+            ),
+            //fourth card
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const MedebFive();
+                    },
+                  ),
+                );
+              },
+              child: Card(
+                margin:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
+                child: Container(
+                  height: 300,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(15.0),
                     image: const DecorationImage(
-                      image: NetworkImage(
-                          "https://images.unsplash.com/photo-1663286358260-7c176022bd7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fitWidth,
+                      image: AssetImage('assets/car.png'),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'ምድብ 5',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
-
-                //5th Image of Slider
-                Container(
-                  margin: const EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    image: const DecorationImage(
-                      image: NetworkImage(
-                          "https://images.unsplash.com/photo-1663370381347-fb1076f1987a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ],
-
-              //Slider Container properties
-              options: CarouselOptions(
-                height: 210.0,
-                enlargeCenterPage: true,
-                autoPlay: true,
-                aspectRatio: 16 / 9,
-                autoPlayCurve: Curves.fastOutSlowIn,
-                enableInfiniteScroll: true,
-                autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                viewportFraction: 0.8,
-              ),
-            ),
-
-            // tutorial lists
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  Card(
-                    margin: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 5.0),
-                    child: Container(
-                      height: 300,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/try.jpg'),
-                        ),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text('Nouveautés'),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            // tutorial lists
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  Card(
-                    margin: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 5.0),
-                    child: Container(
-                      height: 300,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/try.jpg'),
-                        ),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text('Nouveautés'),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            // tutorial lists
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  Card(
-                    margin: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 5.0),
-                    child: Container(
-                      height: 300,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/try.jpg'),
-                        ),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text('Nouveautés'),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            // tutorial lists
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  Card(
-                    margin: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 5.0),
-                    child: Container(
-                      height: 300,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/try.jpg'),
-                        ),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text('Nouveautés'),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            // tutorial lists
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  Card(
-                    margin: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 5.0),
-                    child: Container(
-                      height: 300,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/try.jpg'),
-                        ),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text('Nouveautés'),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            // tutorial lists
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  Card(
-                    margin: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 5.0),
-                    child: Container(
-                      height: 300,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/try.jpg'),
-                        ),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text('Nouveautés'),
-                      ),
-                    ),
-                  )
-                ],
               ),
             ),
           ],

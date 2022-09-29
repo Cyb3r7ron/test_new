@@ -1,0 +1,89 @@
+// put it in child the body widget
+
+
+ListView(
+          children: [
+            CarouselSlider(
+              items: [
+                //1st Image of Slider
+                Container(
+                  margin: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          "https://images.unsplash.com/photo-1661961111184-11317b40adb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+
+                //2nd Image of Slider
+                Container(
+                  margin: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          "https://images.unsplash.com/photo-1663364573300-9436981cbba6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+
+                //3rd Image of Slider
+                Container(
+                  margin: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          "https://images.unsplash.com/photo-1663326223809-7a83745328a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+
+                //4th Image of Slider
+                Container(
+                  margin: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          "https://images.unsplash.com/photo-1663286358260-7c176022bd7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+
+                //5th Image of Slider
+                Container(
+                  margin: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          "https://images.unsplash.com/photo-1663370381347-fb1076f1987a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ],
+
+              //Slider Container properties
+              options: CarouselOptions(
+                height: 210.0,
+                enlargeCenterPage: true,
+                autoPlay: true,
+                aspectRatio: 16 / 9,
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enableInfiniteScroll: true,
+                autoPlayAnimationDuration: const Duration(milliseconds: 800),
+                viewportFraction: 0.8,
+              ),
+            ),
+
+            
+          ],
+        ),
