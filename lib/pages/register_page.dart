@@ -57,7 +57,7 @@ class _RegisterPageState extends State<RegisterPage> {
               children: [
                 const Icon(
                   Icons.emoji_transportation,
-                  color: Colors.deepPurple,
+                  color: Color(0xFF00E676),
                   size: 100,
                 ),
                 const SizedBox(height: 10),
@@ -88,7 +88,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.deepPurple),
+                        borderSide: const BorderSide(color: Color(0xFF00E676)),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       hintText: 'Email Address',
@@ -136,7 +136,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.deepPurple),
+                        borderSide: const BorderSide(color: Color(0xFF00E676)),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       hintText: 'Confirm Password',
@@ -155,7 +155,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: Colors.deepPurple,
+                        color: Colors.greenAccent[400],
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: const Center(

@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text("Home"),
-        backgroundColor: Colors.purple[500],
+        backgroundColor: Colors.greenAccent[400],
         elevation: 0,
         actions: <Widget>[
           Padding(

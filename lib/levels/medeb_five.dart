@@ -23,7 +23,7 @@ class _MedebFiveState extends State<MedebFive> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text("ምድብ 5"),
-        backgroundColor: Colors.purple[500],
+        backgroundColor: Colors.greenAccent[400],
         elevation: 0,
         actions: <Widget>[
           Padding(

@@ -33,7 +33,7 @@ class _VideoPageState extends State<VideoPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("ደረጃ 1"),
-        backgroundColor: Colors.purple[500],
+        backgroundColor: Colors.greenAccent[400],
       ),
       body: SingleChildScrollView(
         child: Column(
