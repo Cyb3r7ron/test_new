@@ -4,6 +4,7 @@ import "package:flutter/material.dart";
 import 'package:firebase_auth/firebase_auth.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:test_new/Videos/medeb_five/automo_one.dart';
 //import 'package:test_new/auth/main_page.dart';
 import 'package:test_new/video_page.dart';
 
@@ -46,7 +47,7 @@ class _MedebFiveState extends State<MedebFive> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const VideoPage();
+                      return const AutomoOne();
                     },
                   ),
                 );

@@ -4,6 +4,8 @@ import "package:flutter/material.dart";
 import 'package:firebase_auth/firebase_auth.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:test_new/Videos/medeb_two/akal_one.dart';
+import 'package:test_new/Videos/medeb_two/auto_one.dart';
 //import 'package:test_new/auth/main_page.dart';
 import 'package:test_new/video_page.dart';
 
@@ -46,7 +48,7 @@ class _MedebTwoState extends State<MedebTwo> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const VideoPage();
+                      return const AutoOne();
                     },
                   ),
                 );
@@ -78,25 +80,38 @@ class _MedebTwoState extends State<MedebTwo> {
               ),
             ),
             //second card
-            Card(
-              margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
-              child: Container(
-                height: 300,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
-                  image: const DecorationImage(
-                    fit: BoxFit.fitWidth,
-                    image: AssetImage('assets/wheel.png'),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const AkalOne();
+                    },
                   ),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text(
-                    'ልዩ',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
+                );
+              },
+              child: Card(
+                margin:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
+                child: Container(
+                  height: 300,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    image: const DecorationImage(
+                      fit: BoxFit.fitWidth,
+                      image: AssetImage('assets/wheel.png'),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'ልዩ',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),

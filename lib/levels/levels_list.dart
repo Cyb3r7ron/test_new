@@ -2,6 +2,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:test_new/Videos/medeb_one/hzbder_one.dart';
+import 'package:test_new/Videos/medeb_one/hzbder_two.dart';
+import 'package:test_new/Videos/medeb_one/motor_one.dart';
 //import 'package:test_new/auth/main_page.dart';
 import 'package:test_new/video_page.dart';
 
@@ -44,7 +47,7 @@ class _LevelsListState extends State<LevelsList> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const VideoPage();
+                      return const MotorOne();
                     },
                   ),
                 );
@@ -76,50 +79,76 @@ class _LevelsListState extends State<LevelsList> {
               ),
             ),
             //second card
-            Card(
-              margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
-              child: Container(
-                height: 300,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
-                  image: const DecorationImage(
-                    fit: BoxFit.fitWidth,
-                    image: AssetImage('assets/bus.png'),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const HzbderOne();
+                    },
                   ),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text(
-                    'ህዝብ 1',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
+                );
+              },
+              child: Card(
+                margin:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
+                child: Container(
+                  height: 300,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    image: const DecorationImage(
+                      fit: BoxFit.fitWidth,
+                      image: AssetImage('assets/bus.png'),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'ህዝብ 1',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
             //third card
-            Card(
-              margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
-              child: Container(
-                height: 300,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
-                  image: const DecorationImage(
-                    fit: BoxFit.fitWidth,
-                    image: AssetImage('assets/sino.jpg'),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const HzbderTwo();
+                    },
                   ),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text(
-                    'ደረቅ 1',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
+                );
+              },
+              child: Card(
+                margin:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0),
+                child: Container(
+                  height: 300,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    image: const DecorationImage(
+                      fit: BoxFit.fitWidth,
+                      image: AssetImage('assets/sino.jpg'),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'ደረቅ 1',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
