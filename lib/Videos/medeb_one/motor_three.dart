@@ -20,7 +20,7 @@ class _MotorThreeState extends State<MotorThree> {
 
   loadVideoPlayer() {
     controller = VideoPlayerController.network(
-        'https://user-images.githubusercontent.com/45810961/185796671-9f6fddcf-74d7-404a-afb5-d75a40e41741.mp4');
+        'https://public.dm.files.1drv.com/y4mw3VGjTRt2LJSpMZlxs_-YLcfA8hIDOrY9TA2djndBAuumCciMwBR80xiePR97wyvSfXaq5txbOJw_7_vmBF_IxqtP0KykX8B6JxVIASrMFlbfV6w2VAYRmPnFY7l43vCouBKl7-GWWe8enUR5p2eu91hj58Wxn3sy-PS5Zg7Q7XOEumxp2Nd0evzJzbWOBdG8EAdGUYRqI2aSvNwrHgK889bY6VoGQBepwrLiNoh-VI?');
     controller.addListener(() {
       setState(() {});
     });
@@ -32,6 +32,7 @@ class _MotorThreeState extends State<MotorThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: Text("ምድብ 1/ሞተር"),
         backgroundColor: Colors.greenAccent[400],

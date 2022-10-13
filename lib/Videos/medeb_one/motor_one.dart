@@ -20,7 +20,7 @@ class _MotorOneState extends State<MotorOne> {
 
   loadVideoPlayer() {
     controller = VideoPlayerController.network(
-        'https://user-images.githubusercontent.com/45810961/185796671-9f6fddcf-74d7-404a-afb5-d75a40e41741.mp4');
+        'https://public.dm.files.1drv.com/y4mRvwjdzvHzVPFlr9zZQN-0drS5uYLQAo3rGsdAh826k9OmHQuC8iFypsdZV1hpB776wBvEow6KONAUjV4J4FI-C7-71o1MtpiSrQ0ja0CK5fNCQ5_DNBkODAkrgUTjMa6WuXUiJssjRi5NLsmIkQcYZOrwFiLoyYNajqAANj8paUgRM_rEy8VmZs_zzm6p17otamkp8FW_MdQyCB_02tfQGuPVJDzOzvwIlvuXJOm6Nk?');
     controller.addListener(() {
       setState(() {});
     });
@@ -32,6 +32,7 @@ class _MotorOneState extends State<MotorOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: Text("ምድብ 1/ሞተር"),
         backgroundColor: Colors.greenAccent[400],

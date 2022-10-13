@@ -20,7 +20,7 @@ class _HzbderkTwoState extends State<HzbderkTwo> {
 
   loadVideoPlayer() {
     controller = VideoPlayerController.network(
-        'https://user-images.githubusercontent.com/45810961/185796671-9f6fddcf-74d7-404a-afb5-d75a40e41741.mp4');
+        'https://public.dm.files.1drv.com/y4mDd2aycgZvjuUXEj0yyJbxZYBkt3ck4SWpkVXDjAoS6CNIPBf-bSBZHQ2P1mbXlR_GjqUc3DK54m-7zCUf_hv2Jx2l-gebbd0OfiJdIJRNuHuFVBCCuJUvnKjs7nn9Lz9Nmb2cU-7rfyTmk_RlPB9wna3FyVkk5yTpPNX-7RqgsZe_Lzkhc1aizknGxBKf4TQuKPLJ6zlRqR2YvVoYXLEQbGi4shlchMWbE0hgaLpSr4?');
     controller.addListener(() {
       setState(() {});
     });
@@ -32,6 +32,7 @@ class _HzbderkTwoState extends State<HzbderkTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: Text("ምድብ 4/ህዝብ/ደረቅ"),
         backgroundColor: Colors.greenAccent[400],

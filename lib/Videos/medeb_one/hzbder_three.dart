@@ -20,7 +20,7 @@ class _HzbderThreeState extends State<HzbderThree> {
 
   loadVideoPlayer() {
     controller = VideoPlayerController.network(
-        'https://user-images.githubusercontent.com/45810961/185796671-9f6fddcf-74d7-404a-afb5-d75a40e41741.mp4');
+        'https://public.dm.files.1drv.com/y4mSRCQfh3dGCAhqQJmQjK01vRM_mRyKNvez5VZQ86gX59VzCE-cnqHUaq53ZlpsDCYZ9_ZG801HzQiAAczi3NSA0KxgcFsaKp62DU5xZ-sZ_3nQuKPLE2sZ37vSIt_ot1OToPpM43AkyKoUJ_CBYBZlfRmBgNyX_b41QfN0EiQUZ77vp2Mbgw3QfpD95blRYM82QcYhMYDH5bdfdKmzDWYjQcSuiDyP4Toem1V6NQfFWY?');
     controller.addListener(() {
       setState(() {});
     });
@@ -32,6 +32,7 @@ class _HzbderThreeState extends State<HzbderThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: Text("ምድብ 1/ህዝብ/ደረቅ"),
         backgroundColor: Colors.greenAccent[400],

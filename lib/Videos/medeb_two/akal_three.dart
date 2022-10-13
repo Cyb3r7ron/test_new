@@ -20,7 +20,7 @@ class _AkalThreeState extends State<AkalThree> {
 
   loadVideoPlayer() {
     controller = VideoPlayerController.network(
-        'https://user-images.githubusercontent.com/45810961/185796671-9f6fddcf-74d7-404a-afb5-d75a40e41741.mp4');
+        'https://public.dm.files.1drv.com/y4m8lTki9l0jBJ6Uye4cU6Kc9Eq_l8VMDWuYLVA9QUTbT4ln_3ZShgupE09AEf8eThLJnsK9rP4dLqvTTWzynmBsifWFsjUNqM1SN2hv-0WA2nM5HK2JpOCnh5aMcG8aTGFyrmUSxHaK8LqCf0v_4Z_Fv_9qtkaX2G0kxRz7NjihXZn78madPuulYuOBGPCnCRtQo8mmjjOM_Nd5OxjRs0oIiFR4C0htFnDWPQOZnuCY2o?');
     controller.addListener(() {
       setState(() {});
     });
@@ -32,6 +32,7 @@ class _AkalThreeState extends State<AkalThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: Text("ምድብ 2/አካል ጉዳተኛ"),
         backgroundColor: Colors.greenAccent[400],

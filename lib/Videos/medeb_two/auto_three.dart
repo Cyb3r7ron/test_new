@@ -20,7 +20,7 @@ class _AutoThreeState extends State<AutoThree> {
 
   loadVideoPlayer() {
     controller = VideoPlayerController.network(
-        'https://user-images.githubusercontent.com/45810961/185796671-9f6fddcf-74d7-404a-afb5-d75a40e41741.mp4');
+        'https://public.dm.files.1drv.com/y4md4Q9nXZKXvYFlX45KMLBhaPFyF64-Acl9Svyd7oUOmVaFEs0UycDgZDpg2qBuqCwQiyBApVT0wmGNUZ3HkbBjK9KPu9zO0PllL9e82LjUL1MTZYQxto-hQTNrjL54J27TsOMzb6-Ri6MMlXraT1xQn8MkrocWUuDvHZ9zREQwHEDnazAMhvl5BrJTWyjt2l9RET7zC_IS2Xouz412tixbbmeW-4fuN3AIqGUTcEbWNY?');
     controller.addListener(() {
       setState(() {});
     });
@@ -32,6 +32,7 @@ class _AutoThreeState extends State<AutoThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: Text("ምድብ 2/አውቶ"),
         backgroundColor: Colors.greenAccent[400],

@@ -20,7 +20,7 @@ class _AutomoOneState extends State<AutomoOne> {
 
   loadVideoPlayer() {
     controller = VideoPlayerController.network(
-        'https://user-images.githubusercontent.com/45810961/185796671-9f6fddcf-74d7-404a-afb5-d75a40e41741.mp4');
+        'https://public.dm.files.1drv.com/y4magOFB9ILL5-ICFOISYtGeEwVhDcsYiF__OhcEtskKtH5a_QjQjC2XRqPhVLn4tf3l_Uz2_JL9Bwm-xlchrFsu9-9A1EFWGYbq4QW8c77hwW5EcgpfztrPiUA84k1frZ4dN2i7uT_AKCyKWjXP-L0onbV4SaNOjMYP6p0yp0tvemOXH6vAPhUEM2_IFc8kIbagw2hA2o1ZW1dev-91F350rhLkATMYCSoNIro8km9bPw?');
     controller.addListener(() {
       setState(() {});
     });
@@ -32,6 +32,7 @@ class _AutomoOneState extends State<AutomoOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: Text("ምድብ 5/አውቶ"),
         backgroundColor: Colors.greenAccent[400],
