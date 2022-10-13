@@ -107,7 +107,7 @@ class _MedebTwoState extends State<MedebTwo> {
                   child: const Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Text(
-                      'ልዩ',
+                      'ለአካል ጉዳተኛ',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,

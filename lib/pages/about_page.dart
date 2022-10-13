@@ -23,7 +23,7 @@ class _AboutPageState extends State<AboutPage> {
           Flexible(
             child: Center(
               child: Text(
-                  "This App was made By Kidus Girma \n Contact: t.me/Telmid20 \n Version 1.2.0 "),
+                  "App was made By Kidus Girma \n Contact: t.me/Telmid20 \n Version 1.2.0 "),
             ),
           ),
         ],

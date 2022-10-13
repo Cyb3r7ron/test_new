@@ -85,11 +85,7 @@ class _AutomoTwoState extends State<AutomoTwo> {
               children: const [
                 Flexible(
                   child: Text(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed"
-                      " do eiusmod tempor incididunt ut labore et dolore magna "
-                      "aliqua. Ut enim ad minim veniam, quis nostrud "
-                      "exercitation ullamco laboris nisi ut aliquip ex ea "
-                      "commodo consequat."),
+                      "የተሽከርካሪ ፍተሻን ጨምሮ በቅድመ ጉዞ ዝግጅት ወቅት ያሉ ተግባራትን የሚያሳይ ቪዲዮ"),
                 ),
               ],
             )
