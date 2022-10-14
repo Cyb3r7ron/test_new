@@ -19,8 +19,8 @@ class _AutomoOneState extends State<AutomoOne> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.asset(
-        'assets/videos/ምድብ አምስት(አውቶሞቢል)/መግቢያ (መግለጫ).mp4');
+    controller =
+        VideoPlayerController.asset('assets/videos/medeb_five_auto/intro.mp4');
     controller.addListener(() {
       setState(() {});
     });
