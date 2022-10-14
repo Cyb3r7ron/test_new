@@ -19,8 +19,8 @@ class _HzbderOneState extends State<HzbderOne> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.network(
-        'https://public.dm.files.1drv.com/y4mwcvVyg9drZ_pJ27sxs6iBDyAEUFHrW3vN43R0dPTDeSkd2BXx0fLqRTydVz6IyxPEfLHgNdQyHwu1A5_hOIC2yTBHblimSxmF1qw1fh-1apeILCZ1HgUsgIIcypfsAT7uVgosuAP86S50wxv0nWtsDtqZp7WUR6_maX16j34oR_zWIVZB-553k_sdO_W2xHZakm7dGaksxhVsEC2_I9tRIYEJiskw0nZy6U1ABqBfAU?');
+    controller =
+        VideoPlayerController.asset('assets/videos/medeb_one_hzbder/intro.mp4');
     controller.addListener(() {
       setState(() {});
     });

@@ -19,8 +19,8 @@ class _MotorOneState extends State<MotorOne> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.network(
-        'https://public.dm.files.1drv.com/y4mRvwjdzvHzVPFlr9zZQN-0drS5uYLQAo3rGsdAh826k9OmHQuC8iFypsdZV1hpB776wBvEow6KONAUjV4J4FI-C7-71o1MtpiSrQ0ja0CK5fNCQ5_DNBkODAkrgUTjMa6WuXUiJssjRi5NLsmIkQcYZOrwFiLoyYNajqAANj8paUgRM_rEy8VmZs_zzm6p17otamkp8FW_MdQyCB_02tfQGuPVJDzOzvwIlvuXJOm6Nk?');
+    controller =
+        VideoPlayerController.asset('assets/videos/medeb_one_motor/intro.mp4');
     controller.addListener(() {
       setState(() {});
     });

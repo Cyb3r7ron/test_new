@@ -19,8 +19,8 @@ class _MotorThreeState extends State<MotorThree> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.network(
-        'https://public.dm.files.1drv.com/y4mw3VGjTRt2LJSpMZlxs_-YLcfA8hIDOrY9TA2djndBAuumCciMwBR80xiePR97wyvSfXaq5txbOJw_7_vmBF_IxqtP0KykX8B6JxVIASrMFlbfV6w2VAYRmPnFY7l43vCouBKl7-GWWe8enUR5p2eu91hj58Wxn3sy-PS5Zg7Q7XOEumxp2Nd0evzJzbWOBdG8EAdGUYRqI2aSvNwrHgK889bY6VoGQBepwrLiNoh-VI?');
+    controller = VideoPlayerController.asset(
+        'assets/videos/medeb_one_motor/third vid.mp4');
     controller.addListener(() {
       setState(() {});
     });

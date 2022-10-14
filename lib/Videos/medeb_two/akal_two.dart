@@ -19,8 +19,8 @@ class _AkalTwoState extends State<AkalTwo> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.network(
-        'https://public.dm.files.1drv.com/y4mNS-BzoARPsO4k43K0ynPI9AORT2ji1SMT6OVlj5fyiLLvy9f3btFAk_Si660f-cQs8qtFnb4NZBj4xOU_EcChcTAX__h80RP4117MCSCH_gRhMrqprc8AzxADiQViOmHCyQ7tRVqLH8tRt7cLh6QggAYJqquNaX5MKZMQTLKBr6Bq43kbTe53k9rCj6fOU4hoL6Fdu6N3ClR5E9KuptgkNgqPLzg_FOfjQxQdR8c8tc?');
+    controller = VideoPlayerController.asset(
+        'assets/videos/medeb_two_akal/second vid.mp4');
     controller.addListener(() {
       setState(() {});
     });

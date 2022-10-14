@@ -83,6 +83,23 @@ flutter:
     - assets/car.png
     - assets/sino.jpg
     - assets/videos/medeb_five_auto/intro.mp4
+    - assets/videos/medeb_five_auto/second vid.mp4
+    - assets/videos/medeb_five_auto/third vid.mp4
+    - assets/videos/medeb_four_hzbder/intro.mp4
+    - assets/videos/medeb_four_hzbder/second vid.mp4
+    - assets/videos/medeb_four_hzbder/third vid.mp4
+    - assets/videos/medeb_one_hzbder/intro.mp4
+    - assets/videos/medeb_one_hzbder/second vid.mp4
+    - assets/videos/medeb_one_hzbder/third vid.mp4
+    - assets/videos/medeb_one_motor/intro.mp4
+    - assets/videos/medeb_one_motor/second vid.mp4
+    - assets/videos/medeb_one_motor/third vid.mp4
+    - assets/videos/medeb_two_akal/intro.mp4
+    - assets/videos/medeb_two_akal/second vid.mp4
+    - assets/videos/medeb_two_akal/third vid.mp4
+    - assets/videos/medeb_two_auto/intro.mp4
+    - assets/videos/medeb_two_auto/second vid.mp4
+    - assets/videos/medeb_two_auto/third vid.mp4
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

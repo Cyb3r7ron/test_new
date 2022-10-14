@@ -19,8 +19,8 @@ class _AutomoTwoState extends State<AutomoTwo> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.network(
-        'https://public.dm.files.1drv.com/y4moIwB88OvUZhhlOfFOvtt-o45dX1HpcL4M8mDx31rJMfedkzaQsH2Pcw-fkeOzAGanTUZ8OVCFs-ddbz-QUWvUMrbpMXWeR3CEpcqLj9PdwJwydo-ufNoM0s2YETeRzuxcD4lNpIVIeuV4_G59pvjCtDkMb4x7SOxhIoKGlu3D9_JfHlLojFi4T3k-M_najKo6YfJn8voKZ2YIghLRqeXnTJQFSFv7IXdikb3uIwo3A4?');
+    controller = VideoPlayerController.asset(
+        'assets/videos/medeb_five_auto/second vid.mp4');
     controller.addListener(() {
       setState(() {});
     });

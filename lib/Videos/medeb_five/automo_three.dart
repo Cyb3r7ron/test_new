@@ -19,8 +19,8 @@ class _AutomoThreeState extends State<AutomoThree> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.network(
-        'https://public.dm.files.1drv.com/y4mFY--LosrzqcAvxTgTUI6POA-yY4EQ37IXtO4bOOWcyVzk6bw8Fc4xqGOyv5FG2AjIwMmTWEPuOkYXrTZoo6FBxcWSfRRjAPemzr8Zax4boTIe1DaVt11vm5sZutZKlQnXFLrdjKk8-VsGI9yOZj_TVl03nhws-LEvyxcw3Ns7BaCm1AjTO7Y6zX6OLX6hkNz18LXNpLVsEV0EL6opwhE1DcvOneO9GYqrKc0wH36-gQ?');
+    controller = VideoPlayerController.asset(
+        'assets/videos/medeb_five_auto/third vid.mp4');
     controller.addListener(() {
       setState(() {});
     });

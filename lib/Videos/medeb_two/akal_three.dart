@@ -19,8 +19,8 @@ class _AkalThreeState extends State<AkalThree> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.network(
-        'https://public.dm.files.1drv.com/y4m8lTki9l0jBJ6Uye4cU6Kc9Eq_l8VMDWuYLVA9QUTbT4ln_3ZShgupE09AEf8eThLJnsK9rP4dLqvTTWzynmBsifWFsjUNqM1SN2hv-0WA2nM5HK2JpOCnh5aMcG8aTGFyrmUSxHaK8LqCf0v_4Z_Fv_9qtkaX2G0kxRz7NjihXZn78madPuulYuOBGPCnCRtQo8mmjjOM_Nd5OxjRs0oIiFR4C0htFnDWPQOZnuCY2o?');
+    controller = VideoPlayerController.asset(
+        'assets/videos/medeb_two_akal/third vid.mp4');
     controller.addListener(() {
       setState(() {});
     });
