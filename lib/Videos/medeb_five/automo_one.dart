@@ -19,8 +19,8 @@ class _AutomoOneState extends State<AutomoOne> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.network(
-        'https://public.dm.files.1drv.com/y4magOFB9ILL5-ICFOISYtGeEwVhDcsYiF__OhcEtskKtH5a_QjQjC2XRqPhVLn4tf3l_Uz2_JL9Bwm-xlchrFsu9-9A1EFWGYbq4QW8c77hwW5EcgpfztrPiUA84k1frZ4dN2i7uT_AKCyKWjXP-L0onbV4SaNOjMYP6p0yp0tvemOXH6vAPhUEM2_IFc8kIbagw2hA2o1ZW1dev-91F350rhLkATMYCSoNIro8km9bPw?');
+    controller = VideoPlayerController.asset(
+        'assets/videos/ምድብ አምስት(አውቶሞቢል)/መግቢያ (መግለጫ).mp4');
     controller.addListener(() {
       setState(() {});
     });
