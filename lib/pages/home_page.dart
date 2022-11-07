@@ -7,6 +7,7 @@ import 'package:test_new/levels/medeb_five.dart';
 import 'package:test_new/levels/medeb_four.dart';
 import 'package:test_new/levels/medeb_two.dart';
 import 'package:test_new/pages/about_page.dart';
+import 'package:test_new/pages/payment_page.dart';
 //import 'package:test_new/auth/main_page.dart';
 import 'package:test_new/video_page.dart';
 
@@ -207,7 +208,7 @@ class _HomePageState extends State<HomePage> {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return const AboutPage();
+                return const PaymentPage();
               },
             ),
           );
