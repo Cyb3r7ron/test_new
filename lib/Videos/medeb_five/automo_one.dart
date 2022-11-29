@@ -33,10 +33,12 @@ class _AutomoOneState extends State<AutomoOne> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      appBar: AppBar(
-        title: Text("ምድብ 5/አውቶ"),
-        backgroundColor: Colors.greenAccent[400],
-      ),
+      appBar: MediaQuery.of(context).orientation == Orientation.landscape
+          ? null
+          : AppBar(
+              title: Text("ምድብ 5/አውቶ"),
+              backgroundColor: Colors.greenAccent[400],
+            ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -85,7 +87,13 @@ class _AutomoOneState extends State<AutomoOne> {
               children: const [
                 Flexible(
                   child: Text(
-                      "የተሽከርካሪ ማቆሚያን ጨምሮ የመለማመጃ ቦታ እና የመሳሰሉት አጠቃላይ የመግቢያ ቪዲዮ"),
+                    "የተሽከርካሪ ማቆሚያ(ፓርኪንግ)\n፤ካፌ፤አገልግሎት መስጫ(ቢሮ)፤ሽንት ቤት እና የመፈተኛው መንገድ በግልፅ ያስረዳል \n ----------------------------------------- \n የሚቀጥለውን ለማየት Next video የሚለውን ይጫኑ 🢇",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      color: Colors.red,
+                    ),
+                  ),
                 ),
               ],
             )

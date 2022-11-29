@@ -33,7 +33,9 @@ class _AkalTwoState extends State<AkalTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      appBar: AppBar(
+      appBar: MediaQuery.of(context).orientation == Orientation.landscape
+          ? null
+          : AppBar(
         title: Text("ምድብ 2/አካል ጉዳተኛ"),
         backgroundColor: Colors.greenAccent[400],
       ),
@@ -85,7 +87,13 @@ class _AkalTwoState extends State<AkalTwo> {
               children: const [
                 Flexible(
                   child: Text(
-                      "የተሽከርካሪ ፍተሻን ጨምሮ በቅድመ ጉዞ ዝግጅት ወቅት ያሉ ተግባራትን የሚያሳይ ቪዲዮ"),
+                    "የፈተናው ውጤት ከመቶ 16% የያዘ ፍተሻ ተሽከርካሪውን ለጉዞ ማዝጋጀት \n ----------------------------------------- \n የሚቀጥለውን ለማየት Next video የሚለውን ይጫኑ 🢇",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      color: Colors.red,
+                    ),
+                  ),
                 ),
               ],
             )

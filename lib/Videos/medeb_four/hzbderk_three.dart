@@ -19,8 +19,8 @@ class _HzbderkThreeState extends State<HzbderkThree> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.asset(
-        'assets/videos/medeb_four_hzbder/third vid.mp4');
+    controller = VideoPlayerController.network(
+        'https://public.dm.files.1drv.com/y4mH3q6gyzpNZB62t0Sic5zBH6OjwEUoao2O-MbosfDgQRkDx6w8deYiuXk7kUQc9nJBWth8WvyYvDxqgP_wfj4a0g5n8wtAf_EY3ZSanO1G55InZQwruRU508uHCN4Zr8zrcr-YkO02qr7T02dFzskTDz4SepAFtti0fujcR6_B4Gr5hgFSTlSb8U8Bd4kayILyr43AAQHYDATQgn5pEZMt-KN1uj0-sJuHvUNKDKXEfo?');
     controller.addListener(() {
       setState(() {});
     });
@@ -33,10 +33,12 @@ class _HzbderkThreeState extends State<HzbderkThree> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      appBar: AppBar(
-        title: Text("ምድብ 4/ህዝብ/ደረቅ"),
-        backgroundColor: Colors.greenAccent[400],
-      ),
+      appBar: MediaQuery.of(context).orientation == Orientation.landscape
+          ? null
+          : AppBar(
+              title: Text("ምድብ 4/ህዝብ/ደረቅ"),
+              backgroundColor: Colors.greenAccent[400],
+            ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -84,7 +86,14 @@ class _HzbderkThreeState extends State<HzbderkThree> {
             Row(
               children: const [
                 Flexible(
-                  child: Text("በዋና ጉዞ ወቅት የሚደረጉ ተግባራትን የሚያሳይ ቪዲዮ"),
+                  child: Text(
+                    "የፈተናው ውጤት ከመቶ 84% የያዘ ከመነሻው ጀምሮ መስመር አጠባበቅ፤ ጠርዝ አሰራር፤ መስናክል አሰራር እና አደባባይ አዟዟር ሁሉንም በግልጽ የሚያስረዳ \n ----------------------------------------- \n ወደኃላ ለመመለስ Previous video የሚለውን ይጫኑ 🢇",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      color: Colors.red,
+                    ),
+                  ),
                 ),
               ],
             )

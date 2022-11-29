@@ -19,8 +19,8 @@ class _AutomoTwoState extends State<AutomoTwo> {
   }
 
   loadVideoPlayer() {
-    controller = VideoPlayerController.asset(
-        'assets/videos/medeb_five_auto/second vid.mp4');
+    controller = VideoPlayerController.network(
+        'https://public.dm.files.1drv.com/y4mICIoAJqkH0xtqA268MRS_nqPb982nz5XPaWZIE5a_fYv0pv5sRRhQ1xAqlbXgu3EYiDhdZhyp0K7PDQyyA3dYtCi5_OHt858CdV0rQMG2dZjvakUO5L5w2bXbwwOxIfuN7ExarclRmfV1QA_sxnOC_ewsuTQmXBW0I1QqgUIzuPbEDsljleCL-MzJpT9ouvD4XH_EKOYxyh78MSwKko9En9joswC_54e5i6Dwdu-jTs?');
     controller.addListener(() {
       setState(() {});
     });
@@ -33,10 +33,12 @@ class _AutomoTwoState extends State<AutomoTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      appBar: AppBar(
-        title: Text("ምድብ 5/አውቶ"),
-        backgroundColor: Colors.greenAccent[400],
-      ),
+      appBar: MediaQuery.of(context).orientation == Orientation.landscape
+          ? null
+          : AppBar(
+              title: Text("ምድብ 5/አውቶ"),
+              backgroundColor: Colors.greenAccent[400],
+            ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -85,7 +87,13 @@ class _AutomoTwoState extends State<AutomoTwo> {
               children: const [
                 Flexible(
                   child: Text(
-                      "የተሽከርካሪ ፍተሻን ጨምሮ በቅድመ ጉዞ ዝግጅት ወቅት ያሉ ተግባራትን የሚያሳይ ቪዲዮ"),
+                    "የፈተናው ውጤት ከመቶ 16% የያዘ ፍተሻ ተሽከርካሪውን ለጉዞ ማዝጋጀት \n ----------------------------------------- \n የሚቀጥለውን ለማየት Next video የሚለውን ይጫኑ 🢇",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      color: Colors.red,
+                    ),
+                  ),
                 ),
               ],
             )

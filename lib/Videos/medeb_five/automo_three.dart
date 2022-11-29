@@ -20,7 +20,7 @@ class _AutomoThreeState extends State<AutomoThree> {
 
   loadVideoPlayer() {
     controller = VideoPlayerController.asset(
-        'assets/videos/medeb_five_auto/third vid.mp4');
+        'assets/videos/medeb_five_auto/second vid_Trim.mp4');
     controller.addListener(() {
       setState(() {});
     });
@@ -33,10 +33,12 @@ class _AutomoThreeState extends State<AutomoThree> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      appBar: AppBar(
-        title: Text("ምድብ 5/አውቶ"),
-        backgroundColor: Colors.greenAccent[400],
-      ),
+      appBar: MediaQuery.of(context).orientation == Orientation.landscape
+          ? null
+          : AppBar(
+              title: Text("ምድብ 5/አውቶ"),
+              backgroundColor: Colors.greenAccent[400],
+            ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -84,7 +86,14 @@ class _AutomoThreeState extends State<AutomoThree> {
             Row(
               children: const [
                 Flexible(
-                  child: Text("በዋና ጉዞ ወቅት የሚደረጉ ተግባራትን የሚያሳይ ቪዲዮ"),
+                  child: Text(
+                    "የፈተናው ውጤት ከመቶ 84% የያዘ ከመነሻው ጀምሮ መስመር አጠባበቅ፤ ጠርዝ አሰራር፤ መስናክል አሰራር እና አደባባይ አዟዟር ሁሉንም በግልጽ የሚያስረዳ \n ----------------------------------------- \n ወደኃላ ለመመለስ Previous video የሚለውን ይጫኑ 🢇",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      color: Colors.red,
+                    ),
+                  ),
                 ),
               ],
             )

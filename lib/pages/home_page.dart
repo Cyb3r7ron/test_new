@@ -65,11 +65,11 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(15.0),
                     image: const DecorationImage(
                       fit: BoxFit.contain,
-                      image: AssetImage('assets/motor.png'),
+                      image: AssetImage('assets/medeb1.png'),
                     ),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(10.0),
+                  /*child: const Padding(
+                    padding: EdgeInsets.all(5.0),
                     child: Text(
                       'ምድብ 1',
                       style: TextStyle(
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
+                  ),*/
                 ),
               ),
             ),
@@ -103,11 +103,11 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(15.0),
                     image: const DecorationImage(
                       fit: BoxFit.fitWidth,
-                      image: AssetImage('assets/car.png'),
+                      image: AssetImage('assets/medeb2.png'),
                     ),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(10.0),
+                  /*child: const Padding(
+                    padding: EdgeInsets.all(3.0),
                     child: Text(
                       'ምድብ 2',
                       style: TextStyle(
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
+                  ),*/
                 ),
               ),
             ),
@@ -141,11 +141,11 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(15.0),
                     image: const DecorationImage(
                       fit: BoxFit.fitWidth,
-                      image: AssetImage('assets/bus.png'),
+                      image: AssetImage('assets/medeb4.png'),
                     ),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(10.0),
+                  /*child: const Padding(
+                    padding: EdgeInsets.all(5.0),
                     child: Text(
                       'ምድብ 4',
                       style: TextStyle(
@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
+                  ),*/
                 ),
               ),
             ),
@@ -179,11 +179,11 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(15.0),
                     image: const DecorationImage(
                       fit: BoxFit.fitWidth,
-                      image: AssetImage('assets/car.png'),
+                      image: AssetImage('assets/medeb5.png'),
                     ),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(10.0),
+                  /*child: const Padding(
+                    padding: EdgeInsets.all(5.0),
                     child: Text(
                       'ምድብ 5',
                       style: TextStyle(
@@ -191,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
+                  ),*/
                 ),
               ),
             ),
@@ -200,7 +200,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.info_outline_rounded),
+        child: Icon(Icons.payment),
         //label: Text('Next Video'),
         backgroundColor: Colors.green,
         onPressed: () {

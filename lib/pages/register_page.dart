@@ -63,9 +63,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(height: 10),
                 //Hello again
                 Text(
-                  'ኤቢ መንጃ ፈቃድ',
+                  'ኤቢ መንጃ ፈቃድ \n (ተግባር ፈተና)',
                   style: GoogleFonts.bebasNeue(
-                    fontSize: 32,
+                    fontSize: 22,
                   ),
                 ),
                 const SizedBox(height: 10),

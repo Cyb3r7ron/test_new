@@ -27,7 +27,7 @@ class _PaymentPageState extends State<PaymentPage> {
           uri: Uri.parse(
               'http://checkout.chapa.co/checkout/web/payment/SC-GbrylgSwGvGL'),
           builder: (context, followLink) => ElevatedButton(
-            child: Text('Go To Payment'),
+            child: Text('Pay 50 Birr'),
             onPressed: followLink,
             style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xFF2DCC06), // Background color
