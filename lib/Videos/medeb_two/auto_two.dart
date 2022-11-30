@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_new/Videos/medeb_two/auto_three.dart';
-//import 'package:video_player/video_player.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-
-import '../medeb_four/hzbderk_two.dart';
+import 'package:video_player/video_player.dart';
 
 class AutoTwo extends StatefulWidget {
   const AutoTwo({Key? key}) : super(key: key);
@@ -13,77 +10,116 @@ class AutoTwo extends StatefulWidget {
 }
 
 class _AutoTwoState extends State<AutoTwo> {
-  late YoutubePlayerController controller;
+  late VideoPlayerController controller;
 
   @override
   void initState() {
+    loadVideoPlayer();
     super.initState();
+  }
 
-    const url = 'https://youtu.be/2fDzCWNS3ig';
-    controller = YoutubePlayerController(
-      initialVideoId: YoutubePlayer.convertUrlToId(url)!,
-      flags: const YoutubePlayerFlags(
-        mute: false,
-        loop: false,
-        autoPlay: true,
+  loadVideoPlayer() {
+    controller = VideoPlayerController.asset(
+        'assets/videos/medeb_two_auto/second vid.mp4');
+    controller.addListener(() {
+      setState(() {});
+    });
+    controller.initialize().then((value) {
+      setState(() {});
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      appBar: MediaQuery.of(context).orientation == Orientation.landscape
+          ? null
+          : AppBar(
+              title: Text("ምድብ 2/አውቶ"),
+              backgroundColor: Colors.greenAccent[400],
+            ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            AspectRatio(
+              aspectRatio: controller.value.aspectRatio,
+              child: VideoPlayer(controller),
+            ),
+            Text("Total Duration: ${controller.value.duration}"),
+            VideoProgressIndicator(
+              controller,
+              allowScrubbing: true,
+              colors: VideoProgressColors(
+                backgroundColor: Colors.redAccent,
+                playedColor: Colors.green,
+                bufferedColor: Colors.purple,
+              ),
+            ),
+            SizedBox(
+              child: Row(
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        if (controller.value.isPlaying) {
+                          controller.pause();
+                        } else {
+                          controller.play();
+                        }
+
+                        setState(() {});
+                      },
+                      icon: Icon(controller.value.isPlaying
+                          ? Icons.pause
+                          : Icons.play_arrow)),
+                  IconButton(
+                    onPressed: () {
+                      controller.seekTo(Duration(seconds: 0));
+                      setState(() {});
+                    },
+                    icon: Icon(Icons.stop),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: const [
+                Flexible(
+                  child: Text(
+                    "የፈተናው ውጤት ከመቶ 16% የያዘ ፍተሻ ተሽከርካሪውን ለጉዞ ማዝጋጀት \n ----------------------------------------- \n የሚቀጥለውን ለማየት Next video የሚለውን ይጫኑ 🢇",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      color: Colors.red,
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButton: FloatingActionButton.extended(
+        //child: Text('Next Page'),
+        label: Text('Next Video'),
+        backgroundColor: Colors.green,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return const AutoThree();
+              },
+            ),
+          );
+        },
       ),
     );
   }
-
-  @override
-  void deactivate() {
-    controller.pause();
-
-    super.deactivate();
-  }
-
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) => YoutubePlayerBuilder(
-        player: YoutubePlayer(
-          controller: controller,
-        ),
-        builder: (context, player) => Scaffold(
-          appBar: AppBar(title: const Text('Youtube Player')),
-          body: ListView(
-            children: const [
-              Flexible(
-                child: Text(
-                  "የፈተናው ውጤት ከመቶ 84% የያዘ ከመነሻው ጀምሮ መስመር አጠባበቅ፤ ጠርዝ አሰራር፤ መስናክል አሰራር እና አደባባይ አዟዟር ሁሉንም በግልጽ የሚያስረዳ \n ----------------------------------------- \n ወደኃላ ለመመለስ Previous video የሚለውን ይጫኑ 🢇",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w900,
-                    color: Colors.red,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.startDocked,
-          floatingActionButton: FloatingActionButton.extended(
-            //child: Text('Next Page'),
-            label: Text('Previous Video'),
-            backgroundColor: Colors.green,
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const HzbderkTwo();
-                  },
-                ),
-              );
-            },
-          ),
-        ),
-      );
 }
+
 
 
 
